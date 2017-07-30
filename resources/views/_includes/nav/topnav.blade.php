@@ -19,7 +19,11 @@
         <li><a href="#">Popular</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <a href="{{route('questions.create')}}" class="btn btn-primary" style="margin-top:5px;">Ask A Question</a>
+        <li>
+          <p class="navbar-btn">
+            <a href="{{route('questions.create')}}" class="btn btn-primary">Ask A Question</a>
+          </p>
+        </li>
         @if (Auth::guest())
             <li><a href="{{ route('login') }}">Login</a></li>
             <li><a href="{{ route('register') }}">Register</a></li>
