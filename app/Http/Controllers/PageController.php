@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\User;
 
 class PageController extends Controller
 {
@@ -18,5 +19,11 @@ class PageController extends Controller
   public function about()
   {
     return "ABOUT US PAGE";
+  }
+
+  public function profile($id)
+  {
+    $user = User::findOrFail($id);
+    return view('profile')->with('user', $user);
   }
 }
