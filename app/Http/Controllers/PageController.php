@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\User;
+use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
@@ -25,5 +27,15 @@ class PageController extends Controller
   {
     $user = User::with(['questions', 'answers', 'answers.question'])->find($id);
     return view('profile')->with('user', $user);
+  }
+
+  public function contact()
+  {
+    return view('contact');
+  }
+
+  public function sendContact(Request $request)
+  {
+    // Send and process the email
   }
 }
