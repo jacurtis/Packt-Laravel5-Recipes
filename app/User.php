@@ -14,6 +14,11 @@ class User extends Authenticatable
       return $this->phone;
     }
 
+    public function routeNotificationForSlack()
+    {
+      return env('SLACK_WEBHOOK');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
