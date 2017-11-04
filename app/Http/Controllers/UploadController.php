@@ -18,6 +18,6 @@ class UploadController extends Controller
     $file = $request->file('picture');
     Storage::disk('public')->put($file->getClientOriginalName(), File::get($file));
 
-    return redirect('/');
+    return view('upload-complete')->with('filename', $filename);
   }
 }
