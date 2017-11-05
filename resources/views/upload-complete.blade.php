@@ -9,12 +9,12 @@
         <hr />
 
         <div class="text-center">
-          <img src="{{ asset('storage/'.$filename) }}" class="img-rounded" />
+          <img src="{{ $url }}" class="img-rounded" />
         </div>
 
         <ul style="margin: 20px;">
           <li><strong>Filename: </strong>{{ $filename }}</li>
-          <li><strong>Storage Path: </strong>{{ asset('storage/'.$filename) }}</li>
+          <li><strong>Storage Path: </strong>{{ $url }}</li>
         </ul>
 
         <div class="row">

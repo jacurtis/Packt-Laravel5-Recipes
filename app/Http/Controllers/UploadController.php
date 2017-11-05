@@ -20,12 +20,13 @@ class UploadController extends Controller
     $file = $request->file('picture');
     $filename = uniqid($user->id."_").".".$file->getClientOriginalExtension();
     // 1_JDHnshshj387373.png
-    Storage::disk('public')->put($filename, File::get($file));
+    Storage::disk('s3')->put($filename, File::get($file), 'public');
 
     // update the user record with the new profile pic filename
-    $user->profile_pic = $filename;
+    $url = Storage::disk('s3')->url($filename);
+    $user->profile_pic = $url;
     $user->save();
 
-    return view('upload-complete')->with('filename', $filename);
+    return view('upload-complete')->with('filename', $filename)->with('url', $url);
   }
 }
