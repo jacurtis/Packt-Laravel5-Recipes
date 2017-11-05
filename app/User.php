@@ -28,6 +28,8 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    protected $appends = array('thumbnail');
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -45,6 +47,12 @@ class User extends Authenticatable
     public function answers()
     {
       return $this->hasMany('App\Answer');
+    }
+
+    public function getThumbnailAttribute()
+    {
+      $path = pathinfo($this->profile_pic);
+      return $path['dirname'].'/'.$path['filename']."-thumb.jpg";
     }
 
 }
