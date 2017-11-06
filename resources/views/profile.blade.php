@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="container">
-    <img class="img-rounded pull-right" src="{{ $user->profile_pic }}" style="max-height:100px;" />
+    <img class="img-rounded pull-right" src="{{ $user->thumbnail }}" style="max-height:100px;" />
     <h1>{{ $user->name }}'s Profile</h1>
     <p>
       See what {{ $user->name }} has been up to on LaravelAnswers.
