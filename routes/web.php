@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile/{user}', 'PageController@profile')->name('profile');
 Route::get('/upload', 'UploadController@getUpload')->name('upload');
 Route::post('/upload', 'UploadController@postUpload');
+
+Route::get('/github/{username}', 'ApiController@github')->name('github');
