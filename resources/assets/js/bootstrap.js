@@ -21,7 +21,8 @@ try {
 
 window.axios = require('axios');
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+//window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+//header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that

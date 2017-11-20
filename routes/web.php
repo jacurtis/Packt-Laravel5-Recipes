@@ -29,3 +29,5 @@ Route::get('/github/{username}', 'ApiController@github')->name('github');
 
 Route::get('/weather', 'ApiController@getWeather')->name('weather');
 Route::post('/weather', 'ApiController@postWeather');
+
+Route::get('/weather-js', 'ApiController@getWeatherJs');

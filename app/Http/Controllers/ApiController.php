@@ -51,4 +51,9 @@ class ApiController extends Controller
 
     return view('weather-ready')->with('weather', $weatherBody)->with('address', $googleBody->results[0]);
   }
+
+  public function getWeatherJs()
+  {
+    return view('weather-js');
+  }
 }
