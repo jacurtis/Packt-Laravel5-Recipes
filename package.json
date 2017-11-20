@@ -11,8 +11,12 @@
     },
     "devDependencies": {
         "axios": "^0.15.3",
+        "babel-preset-react": "^6.24.1",
         "cross-env": "^3.2.3",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4"
+    },
+    "dependencies": {
+        "vue": "^2.5.6"
     }
 }
